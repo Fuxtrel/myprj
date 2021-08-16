@@ -1,4 +1,8 @@
+// import 'dart:html';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -74,18 +78,42 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(15),
             child: Container(
               width: 274,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
               ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(30, 30, 47, 15),
+                    child: SvgPicture.asset(
+                      'assets/home_page/storage_title.svg',
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(30, 15, 30, 25),
+                    child: SvgPicture.asset(
+                      'assets/home_page/separator.svg',
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(30, 0, 30, 5),
+                    child: Container(
+                      width: 214,
+                      height: 44,
+
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(15),
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -95,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(15),
             child: Container(
               width: 320,
               decoration: BoxDecoration(
